@@ -166,7 +166,7 @@ export default function Home() {
         ) : (
           <div className="bg-slate-800 p-4 rounded-lg w-full sticky top-16 z-10 flex flex-col items-center">
             <div className="w-full max-w-lg">
-              <Camera ref={cameraRef} aspectRatio={16 / 9} />
+              {typeof window !== 'undefined' && <Camera ref={cameraRef} aspectRatio={16 / 9} />}
             </div>
             <button
               onClick={captureImage}
